@@ -5,7 +5,7 @@ R = 0.00003728226
 MILE_IN_KM = 1.60934
 
 # two ways of doing it, pd data-series, or dictionary
-# #ds_batt = pd.Series([3.7, 3.6, 3.2],['LIPO_VOLTS', 'LIIO_VOLTS', 'LIFE_VOLTS'])
+# ds_batt = pd.Series([3.7, 3.6, 3.2],['LIPO_VOLTS', 'LIIO_VOLTS', 'LIFE_VOLTS'])
 ds_batt = {'LIPO_VOLTS': 3.7,
            'LIIO_VOLTS': 3.6,
            'LIFE_VOLTS': 3.2}
@@ -15,7 +15,7 @@ ds_conf = {'cell_volts': ds_batt['LIIO_VOLTS'],
            'batt_cells': 10.0,
            'efficiency': .85,
            'motor_teeth': 15,
-           'wheel_teeth': 50,
+           'wheel_teeth': 40,
            'wheel_size': 95.0}
 
 ds_conf['batt_volts'] = round(ds_conf['batt_cells'] * ds_conf['cell_volts'])
